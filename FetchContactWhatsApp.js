@@ -117,8 +117,9 @@ class ContactFinder {
 
         const encodedUri = encodeURI(csvContent);
         const link = document.createElement("a");
+        const filename="Group_"+this.#chatToFind+"_ContactList.csv";
         link.setAttribute("href", encodedUri);
-        link.setAttribute("download", "my_data.csv");
+        link.setAttribute("download", filename);
         document.body.appendChild(link); // Required for FF
 
         link.click();
